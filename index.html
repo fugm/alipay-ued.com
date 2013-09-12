@@ -1,1 +1,134 @@
-It works!
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>支付宝UED首页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="static/sea-modules/alice/base/1.0.1/base.css" type="text/css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="static/style.css" type="text/css" media="screen" charset="utf-8">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-42957874-1', 'alipay.com');
+    ga('send', 'pageview');
+    </script>
+    <script src="static/sea-modules/seajs/seajs/2.1.1/sea.js"></script>
+    <script src="static/config.js"></script>
+    <script src="static/main.js"></script>
+</head>
+<body>
+    <div class="wrapper fn-clear">
+        <div class="frame action" id="frame-index">
+            <div class="index">
+                <h1 class="logo" id="logo"></h1>
+                <img class="alipay-ued" src="static/images/logo.png" alt="" />
+                <ul class="nav fn-clear">
+                    <li><a href="#frame-left" title="点击去用户研究页面" class="frame-toggle" id="h" data-key="ur">用户研究</a></li>
+                    <li><a href="#frame-bottom" title="点击去交互设计页面" class="frame-toggle" id="j" data-key="id">交互设计</a></li>
+                    <li><a href="#frame-top" title="点击去视觉设计页面" class="frame-toggle" id="k" data-key="vd">视觉设计</a></li>
+                    <li><a href="#frame-right" title="点击去前端开发页面" class="frame-toggle" id="l" data-key="wd">前端开发</a></li>
+                </ul>
+                <div class="keymap">
+                    <span data-type="h" class="keymap-ur">H</span>
+                    <span data-type="j" class="keymap-id">J</span>
+                    <span data-type="k" class="keymap-vd">K</span>
+                    <span data-type="l" class="keymap-wd">L</span>
+                    <div class="keymap-description">
+                        按键弹奏支付宝 UED 的乐章<!--[if IE 9]><br>IE9 不支持播放声音</div><![endif]-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar">
+            <a target="_blank" title="支付宝首页" href="https://www.alipay.com/" class="sidebar-alipay"></a>
+            <a title="静音" href="#" class="sidebar-quiet"></a>
+            <a target="_blank" title="分享到微博" href="#" class="sidebar-weibo"></a>
+            <a target="_blank" title="分享到腾讯微博" href="#" class="sidebar-qq"></a>
+            <a target="_blank" title="分享到豆瓣" href="#" class="sidebar-douban"></a>
+        </div>
+        <div class="footer fn-clear">
+            <p class="copyright">CopyRight © 2013 Alipay UED All Right Reserved!</p>
+            <p class="footlink">
+                <a target="_blank" href="http://ued.alipay.com/2010job/"><i class="iconfont" title="支付宝招聘">&#xF03E;</i> 支付宝招聘</a>
+                <a href="#" id="open-duoshuo"><i class="iconfont" title="给我们留言">&#xF031;</i> 给我们留言</a> 
+            </p>
+        </div>
+        <div class="frame" id="frame-right">
+            <div class="page fn-clear">
+                <div class="header">
+                    <h1 class="category-logo">前端开发</h1>
+                    <div class="category-description">
+                        <p>我们是理性派，脑子灵光、生活中不乏小文艺。</p>
+                        <p>我们敲代码，编程序，根据设计创造性地制作产品页面，在开发中起着承上启下的重要作用。</p>
+                    </div>
+                </div>
+                <a href="#frame-index" class="frame-toggle goto"><i class="iconfont" title="返回首页">&#xF03A;</i></a>    
+            </div>
+        </div>
+        <div class="frame" id="frame-left">
+            <div class="page fn-clear">
+                <div class="header">
+                    <h1 class="category-logo">用户研究</h1>
+                    <div class="category-description">
+                        <p>我们是好奇宝宝，追求严谨、亲和力强到男女老少通吃。</p>
+                        <p>我们运用深度访谈、问卷调查等多种方法，对用户心理、行为规律进行探究，并将结果应用于产品设计和改进。</p>
+                    </div>
+                </div>
+                <a href="#frame-index" class="frame-toggle goto"><i class="iconfont" title="返回首页">&#xF039;</i></a>                
+            </div>
+        </div>
+        <div class="frame" id="frame-bottom">
+            <div class="page fn-clear">
+                <div class="header">
+                    <h1 class="category-logo">交互设计</h1>
+                    <div class="category-description">
+                        <p>我们是整理控&纠结狂、关注细节、追求“一秒钟变傻”。</p>
+                        <p>我们通过制作产品原型，设计交互方式等工作，让产品更加符合用户的习惯、经验和期待。</p>
+                    </div>
+                </div>
+                <a href="#frame-index" class="frame-toggle goto"><i class="iconfont" title="返回首页">&#xF03C;</i></a>
+            </div>
+        </div>
+        <div class="frame" id="frame-top">
+            <div class="page fn-clear">
+                <div class="header">
+                    <h1 class="category-logo">视觉设计</h1>
+                    <div class="category-description">
+                        <p>我们是型男索女，罗曼蒂克、总能冒出各种好玩儿点子。</p>
+                        <p>我们定调性、画插画、做视频……把抽象的概念转换为可感知的颜色、文字、声音组合，丰富感官情感体验。 </p>
+                    </div>
+                </div>
+                <a href="#frame-index" class="frame-toggle goto"><i class="iconfont" title="返回首页">&#xF03B;</i></a    
+            </div>
+        </div>
+    </div>
+    <script type="type/template" id="pop-template">
+        <div class="tooltip fade top in">
+            <img src="static/images/head/{{name}}.png" alt="{{name}}头像">
+            <div class="tooltip-inner">
+                <p class="name">{{{name}}}</p>
+                <p class="message">{{{message}}}</p>
+            </div>
+        </div>
+    </script>
+    <div id="duoshuo">
+        <!-- Duoshuo Comment BEGIN -->
+        <div class="ds-thread"></div>
+        <!-- Duoshuo Comment END -->
+        <div id="close-duoshuo">关闭评论框</div>
+    </div>
+    <!--[if lt IE 9]>
+    <div id="ie">
+        <div class="ie-bg">
+            <span class="logo">UED</span>
+            <p class="nosupport"><span class="icon icon-ie"></span>对不起，不支持IE低版本浏览器。</p>
+            <p class="support"><span>建议您使用如下浏览器访问：</span><a href="http://firefox.com.cn/" target="_blank" class="icon icon-firefox"></a><a href="http://www.google.com/chrome/index.html?hl=zh_cn&brand=CHMA&utm_campaign=zh_cn&utm_source=zh_cn-ha-apac-zh_cn-bk&utm_medium=ha" target="_blank" class="icon-chrome"></a><a href="http://www.apple.com.cn/safari/" target="_blank" class="icon-safari"></a><a href="http://windows.microsoft.com/zh-cn/internet-explorer/ie-10-worldwide-languages" target="_blank" class="icon-ie10"></a></p>
+        </div>
+    </div>
+    <![endif]-->
+</body>
+</html>

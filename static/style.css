@@ -1,0 +1,624 @@
+html,
+body {
+    overflow: hidden;
+}
+/*
+ * icon font
+ */
+@font-face {
+    font-family: "rei";
+    src: url("https://i.alipayobjects.com/common/fonts/rei.eot?20130502"); /* IE9 */
+    src: url("https://i.alipayobjects.com/common/fonts/rei.eot?20130502#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("https://i.alipayobjects.com/common/fonts/rei.woff?20130502") format("woff"), /* chrome 6+、firefox 3.6+、Safari5.1+、Opera 11+ */
+    url("https://i.alipayobjects.com/common/fonts/rei.ttf?20130502")  format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */
+    url("https://i.alipayobjects.com/common/fonts/rei.svg?20130502#rei") format("svg"); /* iOS 4.1- */
+}
+.iconfont {
+    font-family:"rei";
+    font-style: normal;
+    font-weight: normal;
+    cursor: default;
+    -webkit-font-smoothing: antialiased;
+}
+
+/*
+ * 页面布局样式
+ */
+.wrapper {
+    font-size: 16px;
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 36px;
+    background: rgba(0, 0, 0, 0.4);
+    font-size: 13px;
+    color: #f8f8f8;
+    line-height: 36px;
+    z-index: 4;
+}
+.footer .copyright {
+    padding-left: 50px;
+    display: inline;
+}
+.footer .footlink {
+    margin-right: 50px;
+    float: right;
+}
+
+.footer .footlink a {
+    padding: 0 10px;
+    color: #fff;
+}
+.footer .footlink a:hover {
+    text-decoration: none;
+}
+.footer .footlink i {
+    color: #bbb;
+}
+.frame {
+    text-align:center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: all .5s cubic-bezier(.8, 0, 1, .8) 0s;
+	   -moz-transition: all .5s cubic-bezier(.8, 0, 1, .8) 0s;
+		 -o-transition: all .5s cubic-bezier(.8, 0, 1, .8) 0s;
+			transition: all .5s cubic-bezier(.8, 0, 1, .8) 0s;
+}
+#frame-index {
+    top: 0;
+    left: 0;
+    background: url(images/background.jpg) repeat 0 0;
+}
+#frame-index.frame-bottom {
+    top: -100%;
+}
+#frame-index.frame-top {
+    top: 100%;
+}
+#frame-index.frame-left {
+    left: 100%;
+}
+#frame-index.frame-right {
+    left: -100%;
+}
+#frame-top {
+    top: -100%;
+    left: 0;
+    background: url(images/background.jpg) repeat 0 0;
+    color: #fff;
+}
+#frame-top.action {
+    top: 0;
+    z-index: 100;
+}
+#frame-bottom {
+    top: 100%;
+    left: 0;
+    background: url(images/background.jpg) repeat 0 0;
+
+}
+#frame-bottom.action {
+    top: 0;
+    z-index: 100;
+}
+#frame-left {
+    top: 0;
+    left: -100%;
+    background: url(images/background.jpg) repeat 0 0;
+
+}
+#frame-left.action {
+    left: 0;
+    z-index: 100;
+}
+#frame-right {
+    top: 0;
+    left: 100%;
+    background: url(images/background.jpg) repeat 0 0;
+}
+#frame-right.action {
+    left: 0;
+    z-index: 100;
+}
+/* 每一页样式 */
+.index {
+    padding: 100px 50px 50px;
+    position: relative;
+}
+.index .logo {
+    width: 600px;
+    height: 70px;
+    background: url(images/logo-title.png) no-repeat 0 0;
+    line-height: 200px;
+    font-size: 120px;
+    margin: 20px auto;
+}
+.index .alipay-ued {
+    position: absolute;
+    top: 0;
+    left: 100px;
+}
+.index .nav {
+    margin: 40px auto;
+    width: 830px;
+}
+.index li {
+    float: left;
+    margin: 0 60px 0 0;
+}
+.index li:last-child {
+    margin: 0 0;
+}
+
+.frame-toggle {
+    box-shadow: 3px 3px 15px #999;
+}
+
+#h {
+    background-image: url(images/ur.png);
+}
+
+#j {
+    background-image: url(images/id.png);
+}
+
+#k {
+    background-image: url(images/vd.png);
+}
+
+#l {
+    background-image: url(images/wd.png);
+}
+
+.index li a {
+    background-position: -1px -1px;
+    width: 159px;
+    height: 159px;
+    border-radius: 2px;    
+    display: block;
+    text-indent: -9999em;
+    overflow: hidden;
+    -webkit-transition: all .1s cubic-bezier(.8, 0, 1, .8) 0s;
+	   -moz-transition: all .1s cubic-bezier(.8, 0, 1, .8) 0s;
+		 -o-transition: all .1s cubic-bezier(.8, 0, 1, .8) 0s;
+			transition: all .1s cubic-bezier(.8, 0, 1, .8) 0s;
+    border: 1px solid #e3e3e3;
+}
+.index li a:hover, .index li .action {
+    border-radius: 160px;
+}
+.index .keymap {
+    width: 256px;
+    margin: 70px auto 0 auto;
+}
+.index .keymap span {
+    cursor: pointer;
+    display: block;
+    float: left;
+    width: 42px;
+    height: 40px;
+    font-size: 26px;
+    line-height: 38px;
+    padding-bottom: 4px;
+    margin: 0 10px;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    text-align: center;
+    vertical-align: middle;
+    color: #999;
+    text-shadow: 0 1px 0px #fff; 
+    box-shadow: 0 -4px 0 0 rgba(0, 0, 0, 0.2) inset;
+}
+
+.index .keymap span.keypressed {
+    box-shadow: none;
+    padding-bottom: 1px;
+    position: relative;
+    top: 3px;
+}
+
+.keymap span.keymap-ur {
+    border-color: #7BB193;
+    color: #7BB193;
+    box-shadow: 0 -4px 0 0 rgba(12, 96, 5, 0.17) inset;
+}
+
+.keymap span.keymap-id {
+    border-color: #BBB09F;
+    color: #BBB09F;
+    box-shadow: 0 -4px 0 0 rgba(96, 41, 5, 0.17) inset;
+}
+
+.keymap span.keymap-vd {
+    border-color: #D38585;
+    color: #D38585;
+    box-shadow: 0 -4px 0 0 rgba(152, 85, 85, 0.24) inset;
+}
+
+.keymap span.keymap-wd {
+    border-color: #90B1C2;
+    color: #90B1C2;
+    box-shadow: 0 -4px 0 0 rgba(5, 34, 96, 0.17) inset;
+}
+
+.keymap-description {
+    clear: both;
+    color: #aaa;
+    padding-top: 10px;
+    font-size: 12px;
+    background: url(images/alipay-logo.png) no-repeat 42px 60px;
+    height: 100px;
+}
+
+.page {
+    padding: 0px 50px;
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+.page .header {
+    width: 420px;
+    height: 100px;
+    position: absolute;
+}
+.page .category-logo {
+    text-indent: -9999px;
+    overflow: hidden;
+    height: 80px;
+}
+.page .category-description {
+    font-size: 14px;
+    text-align:left;
+    line-height: 1.8;
+    width: 350px;
+}
+
+.page .goto {
+    width: 100px;
+    height: 100px;
+    background: rgba(0, 0, 0, 0.2);
+    text-align: center;
+    overflow: hidden;
+    display: block;
+    border-radius: 100px 100px;
+    position: absolute;
+    font-size: 32px;
+    color: #fff;
+    line-height: 60px;
+    z-index: 210;
+    box-shadow: none;
+}
+.page .goto i {
+    cursor: pointer;
+    display: block;
+}
+.page .goto:hover {
+    background: rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#frame-top .header {
+    top: 60px;
+    right: 140px;
+    color: #BC6363;
+}
+#frame-top .category-logo {
+    background: url(images/vd-logo.png) no-repeat;
+}
+#frame-top .goto {
+    bottom: -50px;
+    left: 50%;
+    margin-left: -50px;
+}
+#frame-top .goto i {
+    padding-bottom: 30px;
+}
+#frame-bottom .header {
+    left: 140px;
+    top: 60px;
+    color: #C59145;
+}
+#frame-bottom .category-logo {
+    background: url(images/id-logo.png) no-repeat;
+}
+#frame-bottom .goto {
+    top: -50px;
+    left: 50%;
+    margin-left: -50px;
+}
+#frame-bottom .goto i {
+    padding-top: 40px;
+}
+#frame-left .header {
+    right: 140px;
+    top: 60px;
+    color: #298848;
+}
+#frame-left .category-logo {
+    background: url(images/ur-logo.png) no-repeat;
+}
+#frame-left .goto {
+    top: 50%;
+    margin-top: -50px;
+    right: -50px;
+    line-height: 100px;
+}
+#frame-left .goto i {
+    width: 50px;
+    padding-left: 5px;
+}
+#frame-right .header {
+    left: 140px;
+    top: 60px;
+    color: #3589B0;
+}
+#frame-right .category-logo {
+    background: url(images/wd-logo.png) no-repeat;
+}
+#frame-right .goto {
+    top: 50%;
+    margin-top: -50px;
+    left: -50px;
+    line-height: 100px;
+}
+#frame-right .goto i {
+    width: 50px;
+    padding-left: 45px;
+}
+
+/* profile style */
+a.ball {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    z-index: 101;
+    text-decoration:none;
+    border-radius: 60px;
+    font-size: 16px;
+    border: 3px solid transparent;
+    opacity: 0;
+    transition: opacity 1.5s ease-out, background-color 0.5s ease-out;
+    -webkit-transition: opacity 1.5s ease-out, background-color 0.5s ease-out;
+}
+
+a.ball .tooltip {
+    transition: none;
+}
+
+a.ball:hover,
+a.ball-hover {
+    z-index: 102;
+    opacity: 1!important;
+    background-color: rgba(255, 255, 255, 0)!important;
+}
+
+/* tooltip style */
+
+.tooltip {
+    font-size: 12px;
+    z-index: 102;
+    -webkit-animation: scale 0.25s ease-out;
+    animation: scale 0.25s ease-out;
+    color: #555;
+    padding: 8px 10px;
+    border-radius: 2px;
+    background: #fff;
+    border: 1px solid #ccc;
+    min-width: 178px;
+}
+.tooltip.in {
+    opacity: 1;
+}
+.tooltip.top {
+    padding-bottom: 9px;
+}
+.tooltip.bottom {
+    padding-top: 8px;
+}
+.tooltip-inner {
+    overflow: hidden;
+}
+
+.tooltip img {
+    height: 50px;
+    width: 50px;
+    float: left;
+    margin-right: 10px;
+}
+
+.tooltip .name {
+    font-size: 16px;
+    margin-top: 0;
+    font-weight: bold;
+}
+
+@keyframes scale {
+    from {
+        opacity: 0;
+        transform: translate(-50px, 0) scale(0.2);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0,0) scale(1);
+    }
+}
+
+@-webkit-keyframes scale {
+    from {
+        opacity: 0;
+        -webkit-transform: translate(-50px,0) scale(0.2);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translate(0,0) scale(1);
+    }
+}
+
+#duoshuo {
+    position: absolute;
+    top: 180px;
+    left: 50%;
+    margin-left: -480px;
+    width: 900px;
+    background: #fff;
+    padding: 20px 20px;
+    height: 440px;
+    overflow-y: auto;
+    display: none;
+    border-radius: 10px 10px;
+    border: 10px solid #d4d9dc;
+}
+
+#duoshuo #close-duoshuo {
+    font-size: 14px;
+    color: #666;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.scale {
+    transform: rotate(2deg) scale(1.05);
+    text-shadow: 0 0 5px #111;
+    color: transparent;
+}
+
+/* ie block */
+
+#ie {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: #e6f9f8;
+    z-index: 100;
+}
+.ie-bg {
+    margin: 260px auto;
+    width: 500px;
+    height: 300px;
+    padding: 50px;
+    background: #ffffff;
+    box-shadow: 0px 0px 4px #d9f0f0, 0px 4px 5px #c9e5e5;
+    border-radius: 5px 5px;
+    padding-bottom: 2px;
+    border: 2px solid #d9f0f0;
+    position: relative;
+}
+.ie-bg .logo {
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    border-left: 1px solid #ff8824;
+    border-right: 1px solid #ff8824;
+    border-bottom: 1px solid #ff8824;
+    background: #ffa457;
+    position: absolute;
+    top: -0px;
+    right: 30px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 40px;
+}
+.ie-bg .nosupport {
+    line-height: 50px;
+    font-size: 28px;
+    color: #87d2fb;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #f6f6f6;
+}
+.ie-bg .support {
+    padding-top: 20px;
+    font-size: 16px;
+    color: #999;
+}
+.ie-bg .support span {
+    display: block;
+    line-height: 30px;
+    padding-bottom: 20px;
+}
+.ie-bg .support a {
+    display: block;
+    float: left;
+    width: 60px;
+    height: 60px;
+    border: 1px solid #f6f6f6;
+    background-image: url(images/browser.jpg);
+    background-repeat: no-repeat;
+    margin-right: 20px;
+}
+.ie-bg .support a:hover {
+    border: 1px solid #87d2fa;
+}
+.icon-firefox {
+    background-position: -15px -4px;
+}
+.icon-chrome {
+    background-position: -175px -4px;
+}
+.icon-safari {
+    background-position: -252px -5px;
+}
+.icon-ie10 {
+    background-position: -96px -5px;
+}
+.icon-ie {
+    margin-right: 20px;
+    width: 50px;
+    height: 50px;
+    display: block;
+    overflow: hidden;
+    background: url(images/browser.jpg) no-repeat -100px -13px;
+    float: left;
+}
+
+.youarehere {
+    width: 30px!important;
+    height: 30px!important;
+    border-radius: 60px!important;
+    background: #FF8823!important;
+    border-color: #FF8823!important;
+    opacity: 0.8!important;
+    z-index: 1000!important;
+}
+
+.youarehere .tooltip {
+    color: #FF8823!important;    
+}
+
+.sidebar {
+    position: absolute;
+    right: 0;
+    top: 200px;
+    width: 57px;
+    height: 304px;
+    background: url(images/sidebar.png) no-repeat;    
+}
+
+.sidebar a,
+.sidebar span {
+    display:block;
+    width: 57px;
+    height: 40px;
+    text-decoration:none;    
+}
+
+.sidebar a.sidebar-alipay {
+    height: 102px;
+}
+
+.quiet:after {
+    color: #C11B1B;
+    content: "×";
+    font-size: 32px;
+    left: 18px;
+    line-height: 1;
+    position: relative;
+    top: 3px;
+    text-decoration:none;
+}
