@@ -1,6 +1,6 @@
 alipay-ued.com
 ==============
 
-The Official Site of Alipay UED Teami
+The Official Site of Alipay UED Team
 
 
